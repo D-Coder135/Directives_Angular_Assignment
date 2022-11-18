@@ -11,5 +11,6 @@ export class AppComponent {
 
   onToggleDetails() {
     this.showSecret = !this.showSecret;
+    this.log.push(this.log.length + 1);
   }
 }
