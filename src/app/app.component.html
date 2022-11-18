@@ -17,6 +17,7 @@
       <button (click)="onToggleDetails()" class="btn btn-primary">Toggle Details</button>
       <p *ngIf="showSecret">Secret Password = tuna</p>
       <div *ngFor="let logItem of log"
+           [ngClass]="{'text-color': logItem >= 5}"
            [ngStyle]="{backgroundColor: logItem >= 5 ? 'blue' : 'transparent'}">{{logItem}}</div>
     </div>
   </div>
